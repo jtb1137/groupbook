@@ -41,6 +41,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'jquery-rails'
 # Authentication and Authorization
 gem 'devise'
+# Bootstrap form formating
+gem "bootstrap_form"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
