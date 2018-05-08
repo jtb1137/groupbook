@@ -18,5 +18,14 @@ module Groupbook
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+    config.generators do |g|
+      g.template_engine :erb
+      g.test_framework  :rspec, :fixture => true, :views => false
+      g.integration_tool :rspec, :fixture => true, :views => true
+      g.fixture_replacement :factory_bot, :dir => "spec/support/factories" 
+    end
+
   end
 end
+
+
