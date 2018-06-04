@@ -1,0 +1,8 @@
+<%= bootstrap_form_for(@post) do |f| %>
+  <%= f.text_field :title, placeholder: "Title", class: "form-control", required: true, minlength: 5, maxlength: 100 %>
+  <%= f.hidden_field :branch, value: @branch %>
+  <%= f.text_area :content, placeholder: "Descibe what you're looking for. E.g. topic, skill level, etc...", class: "form-control",
+    required: true, rows: 6, minlength: 20, maxlength: 1000 %>
+  <%= f.collection_select :category_id, @categories, :id, :name, class: "form-control" %>
+  <%= f.submit "Create Post", class: "form-control" %>
+<% end %>
