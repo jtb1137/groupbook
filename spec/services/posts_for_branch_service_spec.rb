@@ -3,7 +3,7 @@ require "./app/services/posts_for_branch_service.rb"
 
 describe PostsForBranchService do
   context "#call" do
-    let(:not_incliuded_posts) { create_list(:post, 2) }
+    let(:not_included_posts) { create_list(:post, 2) }
     let(:category) { create(:category, branch: "hobby", name: "arts") }
 
     let(:post) do
@@ -28,7 +28,7 @@ describe PostsForBranchService do
       not_included_posts
       category
       included_post = [] << post
-      expect(PostsForBranchService.new({ branch: "hpbby", category: "arts" }).call).to(eq included_post)
+      expect(PostsForBranchService.new({ branch: "hobby", category: "arts" }).call).to(eq included_post)
     end
 
     it "returns posts filtered by a category name and a search input" do
