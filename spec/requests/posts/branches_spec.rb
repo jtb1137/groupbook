@@ -1,5 +1,5 @@
 require "rails_helper"
-include Warden::Test:Helpers
+include Warden::Test::Helpers
 
 RSpec.describe "branches", type: :request do
 
@@ -7,7 +7,7 @@ RSpec.describe "branches", type: :request do
 
     it "renders a hobby template" do
       get "/posts/hobby"
-      expect(response.to render_template(:hobby)
+      expect(response).to render_template(:hobby)
     end
 
     it "renders a study template" do
