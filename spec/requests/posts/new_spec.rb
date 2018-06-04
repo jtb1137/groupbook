@@ -1,7 +1,7 @@
 require "rails_helper"
 include Warden::Test::Helpers
 
-Rspec.describe "new", type: :request do
+RSpec.describe "new", type: :request do
   context "non-signed in user" do
     it "redirects to root path" do
       get "/posts/new"

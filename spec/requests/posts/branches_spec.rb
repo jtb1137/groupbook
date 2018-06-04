@@ -1,7 +1,7 @@
 require "rails_helper"
 include Warden::Test:Helpers
 
-Rspec.describe "branches", type: :request do
+RSpec.describe "branches", type: :request do
 
   shared_examples "render_templates" do
 
